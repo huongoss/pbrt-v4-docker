@@ -228,3 +228,10 @@ is straightforward:
 ```bash
 $ imgtool denoise-optix noisy.exr --outfile denoised.exr
 ```
+### Docker
+
+```bash
+docker build . -t pbrt
+
+docker run --network=host -v ./crown:/app/crown --rm pbrt  --display-server localhost:14158 /app/crown/crown.pbrt
+```
